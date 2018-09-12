@@ -32,6 +32,22 @@ creation of new profiles with:
 
 ![](https://raw.githubusercontent.com/equk/ffox_profile_tools/master/screenshots/ffox_styles_62.png)
 
+## Changelog
+
+    # 19-05-2015 -  initial script with tweaks
+    # ref: https://equk.co.uk/2015/05/19/firefox-scripts/
+    # 06-06-2015 -  disable pocket (bundled with firefox)
+    # ----------------------------------------------------------------
+    #               enable OffMainThreadCompositing
+    #               added new tweaks ref: fingerprinting
+    # 2018          enabled tracking protection globally
+    #               enabled always send DoNotTrack
+    # 08-09-2018    added userChrome.css
+    #               added style - bookmark item spacing
+    #               added style - move find bar to top
+    # 09-09-2018    added style - adwaita folder icon
+    # 11-09-2018    added style - find dropdown on right
+
 ---
 
 <details><summary>Mozilla References</summary>
