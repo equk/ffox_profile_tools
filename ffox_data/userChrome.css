@@ -1,0 +1,32 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Firefox Style Overrides - github.com/equk | twitter.com/equilibriumuk */
+/* Move Find Bar To Top */
+.browserContainer>findbar {
+    -moz-box-ordinal-group: 0;
+}
+
+/* Move Find To Right Styled As Dropdown */
+.browserContainer {
+    position: relative;
+}
+
+findbar {
+    position: absolute;
+    top: -1px;
+    right: 25px;
+    border: 1px solid var(--toolbox-border-bottom-color);
+    border-top-width: 0;
+    border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
+}
+
+/* Add Padding To Items On Bookmarks Bar */
+toolbarbutton.bookmark-item {
+    padding: 5px !important;
+}
+
+/* Change Folder Icon In Bookmarks */
+/* Adwaita Folder Icon base64 */
+.bookmark-item[container] {
+    list-style-image: url(' data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABO0lEQVR4AaXSA3IDcRzF8T1Le4DeqFepbQ1rxnZWtW3btvv6auM/ycw3yeL3WUoRf+SGhFS5If6S4X1hQ/wpi/0b4HC/XovB5oYP9WnVUAwJp6ohMeYvAO2+EjQ7cl5rtGdDt+ZANWf9nCUbmjlT/wI02QlYc7E62Y6DtQkcrI5hf2UUe8vD2F0axO5CH3bme7Ax1foISaopDRq1Z5lAPjbn+rC3NITlQR+WB7w/9QxYsqmP4HBjBkebT+0s9HMHP/P92hPAr9WhAFZ4NJE48wasjchc6ReKM2/A+riOFYoiceYN2JhsFgY48wZsTbfzmoJCceYN2J7rwupwUCjOPAGaOft8k9rKw6Pp9/wr7ovNyVbw/TmTdEu2OqJW3i72OiDSsFx2S0CWFENmtGbOmuPpQCQeeFa25kXdA1jy284Z9mA2AAAAAElFTkSuQmCC') !important;
+}
