@@ -1,0 +1,74 @@
+#!/bin/bash
+#*****************************************************************
+#     ffox_profile_tools - equk.co.uk
+#*****************************************************************
+#
+# This script was created to simplify and standardize firefox configuration
+# across profiles.
+#
+# 19-05-2015 -  initial script with tweaks
+# ref: https://equk.co.uk/2015/05/19/firefox-scripts/
+# 06-06-2015 -  disable pocket (bundled with firefox)
+# ----------------------------------------------------------------
+#               enable OffMainThreadCompositing
+#               added new tweaks ref: fingerprinting
+# 2018          enabled tracking protection globally
+#               enabled always send DoNotTrack
+# 08-09-2018    added userChrome.css
+#               added style - bookmark item spacing
+#               added style - move find bar to top
+# 09-09-2018    added style - adwaita folder icon
+# 11-09-2018    added style - find dropdown on right
+#
+# License: MIT (LICENSE file should be included with script)
+#*****************************************************************
+
+## variables
+
+profile_name=${0##*/}
+profile_folder="$HOME/.ffox_profiles/$profile_name"
+##
+SCRIPT_P=${0%/*}
+ffox_bin="/usr/bin/firefox"
+ffox_prefs="$SCRIPT_P/ffox_data/def_prefs.js"
+ffox_userChrome="$SCRIPT_P/ffox_data/userChrome.css"
+
+# Check if running within X Window Session
+if [ "x$DISPLAY" = "x" ]; then
+    echo "must be run within the X Window System." >&2
+    echo "Exiting." >&2
+    exit 1
+fi
+
+# Check for root ( quit if root :x )
+if [ $(whoami) = "root" ]; then
+    exit 1
+fi
+
+# Check if user namespaces is enabled (for sandbox)
+# Note: this is to enforce user namespaces for sandbox
+if [[ ! (-r /proc/sys/kernel/unprivileged_userns_clone && $(< /proc/sys/kernel/unprivileged_userns_clone) == 1 && -n $(zcat /proc/config.gz | grep CONFIG_USER_NS=y) ) ]]; then
+    echo "User namespaces are not detected as enabled on your system, this is required for sandbox"
+    exit 1
+fi
+
+# Create profile directory if it doesn't exist
+if [[ ! -e $profile_folder ]]; then
+    mkdir -p $profile_folder
+fi
+
+# Copy custom preferences if none exist
+if [[ ! -e $profile_folder/prefs.js ]]; then
+    cp $ffox_prefs $profile_folder/prefs.js
+fi
+
+# Copy custom userChrome style overrides if none exist
+if [[ ! -e $profile_folder/chrome/userChrome.css ]]; then
+    if [[ ! -e $profile_folder/chrome ]]; then
+        mkdir $profile_folder/chrome
+    fi
+    cp $ffox_userChrome $profile_folder/chrome/userChrome.css
+fi
+
+# Execute firefox
+exec $ffox_bin --profile "$profile_folder" --new-instance
