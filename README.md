@@ -27,3 +27,7 @@ creation of new profiles with:
 * use RAM for caching
 * custom find (top-right drop-down)
 * checks for user namespaces (used for sandboxing)
+
+## Screenshot
+
+![](https://raw.githubusercontent.com/equk/ffox_profile_tools/master/screenshots/ffox_styles_62.png)
