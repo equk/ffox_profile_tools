@@ -31,3 +31,13 @@ creation of new profiles with:
 ## Screenshot
 
 ![](https://raw.githubusercontent.com/equk/ffox_profile_tools/master/screenshots/ffox_styles_62.png)
+
+---
+
+<details><summary>Mozilla References</summary>
+
+[MozillaWiki](https://wiki.mozilla.org/Main_Page)
+
+[Security/Sandbox - Mozilla Wiki](https://wiki.mozilla.org/Security/Sandbox)
+
+[Garf's blog: Linux sandboxing improvements in Firefox 60](https://www.morbo.org/2018/05/linux-sandboxing-improvements-in_10.html)</details>
