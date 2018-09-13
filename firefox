@@ -33,6 +33,8 @@ ffox_bin="/usr/bin/firefox"
 ffox_prefs="$SCRIPT_P/ffox_data/def_prefs.js"
 ffox_userChrome="$SCRIPT_P/ffox_data/userChrome.css"
 
+#*****************************************************************
+
 # Check if running within X Window Session
 if [ "x$DISPLAY" = "x" ]; then
     echo "must be run within the X Window System." >&2
@@ -49,6 +51,16 @@ fi
 # Note: this is to enforce user namespaces for sandbox
 if [[ ! (-r /proc/sys/kernel/unprivileged_userns_clone && $(< /proc/sys/kernel/unprivileged_userns_clone) == 1 && -n $(zcat /proc/config.gz | grep CONFIG_USER_NS=y) ) ]]; then
     echo "User namespaces are not detected as enabled on your system, this is required for sandbox"
+    exit 1
+fi
+
+# Quit if ffox_prefs doesn't exist
+if [[ ! -e $ffox_prefs ]]; then
+   exit 1
+fi
+
+# Quit if ffox_userChrome doesn't exist
+if [[ ! -e $ffox_userChrome ]]; then
     exit 1
 fi
 
