@@ -65,12 +65,14 @@ fi
 # Quit if ffox_prefs doesn't exist
 if [[ ! -e $ffox_prefs ]]; then
     echo -e "$cl_error $ffox_prefs not found"
+    notify-send -i dialog-error "$profile_name" "ERROR: $ffox_prefs not found"
     exit 1
 fi
 
 # Quit if ffox_userChrome doesn't exist
 if [[ ! -e $ffox_userChrome ]]; then
     echo -e "$cl_error $ffox_userChrome not found"
+    notify-send -i dialog-error "$profile_name" "ERROR: $ffox_userChrome not found"
     exit 1
 fi
 
