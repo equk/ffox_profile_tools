@@ -35,6 +35,13 @@ ffox_userChrome="$SCRIPT_P/ffox_data/userChrome.css"
 
 #*****************************************************************
 
+# color / colour
+red="\033[1;31m"
+reset="\033[0m"
+
+# CLI feedback
+cl_error="[$red ERROR $reset]"
+
 # Check if running within X Window Session
 if [ "x$DISPLAY" = "x" ]; then
     echo "must be run within the X Window System." >&2
@@ -44,6 +51,7 @@ fi
 
 # Check for root ( quit if root :x )
 if [ $(whoami) = "root" ]; then
+    echo -e "$cl_error do not run this script as root"
     exit 1
 fi
 
@@ -56,11 +64,13 @@ fi
 
 # Quit if ffox_prefs doesn't exist
 if [[ ! -e $ffox_prefs ]]; then
-   exit 1
+    echo -e "$cl_error $ffox_prefs not found"
+    exit 1
 fi
 
 # Quit if ffox_userChrome doesn't exist
 if [[ ! -e $ffox_userChrome ]]; then
+    echo -e "$cl_error $ffox_userChrome not found"
     exit 1
 fi
 
