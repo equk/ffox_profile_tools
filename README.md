@@ -45,6 +45,7 @@ creation of new profiles with:
     #               added style - move find bar to top
     # 09-09-2018    added style - adwaita folder icon
     # 11-09-2018    added style - find dropdown on right
+    # 25-09-2018    added style - gtk folder icon
 
 ---
 
