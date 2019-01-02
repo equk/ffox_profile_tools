@@ -26,6 +26,15 @@
  *                  + Always Send Do Not Track
  */
 
+/*
+ * Optional Preferences
+ * --------------------
+ *
+ * Adjust number of lines scrolled on mouse
+ * user_pref("mousewheel.min_line_scroll_amount", 60);
+ *
+ */
+
 user_pref("browser.cache.disk.capacity", 358400);
 user_pref("browser.cache.disk.enable", false);
 user_pref("network.cookie.cookieBehavior", 1);
