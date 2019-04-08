@@ -36,6 +36,9 @@
  * Disable website notifications (eg: reddit)
  * user_pref("dom.webnotifications.enabled", false);
  *
+ * Enable U2F (FIDO) Authentication
+ * user_pref("security.webauth.u2f", true);
+ *
  */
 
 user_pref("browser.cache.disk.capacity", 358400);
