@@ -33,6 +33,9 @@
  * Adjust number of lines scrolled on mouse
  * user_pref("mousewheel.min_line_scroll_amount", 60);
  *
+ * Disable website notifications (eg: reddit)
+ * user_pref("dom.webnotifications.enabled", false);
+ *
  */
 
 user_pref("browser.cache.disk.capacity", 358400);
