@@ -24,6 +24,7 @@
  *                  + Disable Mozilla telemetry
  *                  + Enable Tracking Protection
  *                  + Always Send Do Not Track
+ *                  + Disable DoH (DNS-over-HTTPS)
  */
 
 /*
@@ -70,3 +71,4 @@ user_pref("toolkit.telemetry.unified",false);
 user_pref("network.http.referer.spoofSource",true);
 user_pref("privacy.trackingprotection.enabled",true);
 user_pref("privacy.donottrackheader.enabled",true);
+user_pref("network.trr.mode", 5);
