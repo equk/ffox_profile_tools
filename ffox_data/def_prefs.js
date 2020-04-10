@@ -40,6 +40,9 @@
  * Enable U2F (FIDO) Authentication
  * user_pref("security.webauth.u2f", true);
  *
+ * Disable Ugly URL Bar Zoom
+ * user_pref("browser.urlbar.update1",false);
+ *
  */
 
 user_pref("browser.cache.disk.capacity", 358400);
@@ -72,3 +75,4 @@ user_pref("network.http.referer.spoofSource",true);
 user_pref("privacy.trackingprotection.enabled",true);
 user_pref("privacy.donottrackheader.enabled",true);
 user_pref("network.trr.mode", 5);
+user_pref("browser.urlbar.update1",false);
