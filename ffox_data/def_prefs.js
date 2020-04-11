@@ -43,6 +43,12 @@
  * Disable Ugly URL Bar Zoom
  * user_pref("browser.urlbar.update1",false);
  *
+ * Enable Darkmode (prefers-color-scheme)
+ * user_pref("ui.systemUsesDarkTheme", 1);
+ *
+ * Set DevTools Dark Theme
+ * user_pref("devtools.theme", "dark");
+ *
  */
 
 user_pref("browser.cache.disk.capacity", 358400);
