@@ -1,4 +1,4 @@
-# ffox_profile_tools
+# 🦊 ffox_profile_tools 🐧
 
 firefox profiles with security presets &amp; userchrome styles
 
@@ -6,7 +6,7 @@ firefox profiles with security presets &amp; userchrome styles
 
 The purpose of this project is to provide a way to create new firefox profiles with security & privacy settings already preset.
 
-It also includes some style customizations using userChrome.css.
+It also includes some style customizations using `userChrome.css`.
 
 ## Usage
 
@@ -18,13 +18,15 @@ Optionally you may also want to change the `profile_folder` variable (default is
 
 ## Features
 
-creation of new profiles with:
+Creation of new profiles with:
 
-* security & privacy related settings
-* custom style overrides
-* use RAM for caching
-* custom find (top-right drop-down)
-* checks for user namespaces (used for sandboxing)
+- [x] Security & Privacy Related Settings Pre-Set
+- [x] Find At Top Of Screen
+- [x] RAM Caching Enabled
+- [x] Sandbox Check (user namespaces kernel setting)
+- [x] Bookmark Bar Spacing
+- [x] Disable Ugly `urlbar` Zoom (firefox >75)
+- [x] Disable Ugly Drop Shadow On Search
 
 ## Screenshot
 
