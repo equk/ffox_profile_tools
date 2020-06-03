@@ -58,7 +58,7 @@ fi
 
 # Check if user namespaces is enabled (for sandbox)
 # Note: this is to enforce user namespaces for sandbox
-if [[ ! (-r /proc/sys/kernel/unprivileged_userns_clone && $(< /proc/sys/kernel/unprivileged_userns_clone) == 1 && -n $(zcat /proc/config.gz | grep CONFIG_USER_NS=y) ) ]]; then
+if [[ ! (-r /proc/sys/kernel/unprivileged_userns_clone && $(</proc/sys/kernel/unprivileged_userns_clone) == 1 && -n $(zcat /proc/config.gz | grep CONFIG_USER_NS=y)) ]]; then
     echo "User namespaces are not detected as enabled on your system, this is required for sandbox"
     exit 1
 fi
@@ -82,18 +82,43 @@ if [[ ! -e $profile_folder ]]; then
     mkdir -p $profile_folder
 fi
 
+function copy() {
+    if [ -f $1 ]; then
+        ORIGIN=$1
+        DESTINATION=$2
+
+        if [ -a "$DESTINATION" ]; then
+            if diff "$ORIGIN" "$DESTINATION" >/dev/null; then
+                echo -e "  $bplus $DESTINATION already up to date"
+                return 2
+            fi
+
+            while true; do
+                echo -e "  $gplus updating file $DESTINATION"
+                cp "$ORIGIN" "$DESTINATION"
+                return 2
+            done
+        else
+            echo -e "  $gplus Copying $ORIGIN"
+            cp "$ORIGIN" "$DESTINATION"
+        fi
+
+    else
+        echo -e "  $red ERROR:$reset '$1' does not exist"
+    fi
+}
+
 # Copy custom preferences if none exist
 if [[ ! -e $profile_folder/prefs.js ]]; then
     cp $ffox_prefs $profile_folder/prefs.js
 fi
 
-# Copy custom userChrome style overrides if none exist
-if [[ ! -e $profile_folder/chrome/userChrome.css ]]; then
-    if [[ ! -e $profile_folder/chrome ]]; then
-        mkdir $profile_folder/chrome
-    fi
-    cp $ffox_userChrome $profile_folder/chrome/userChrome.css
+# Copy custom userChrome style overrides if required
+# (works for updates to userChrome.css)
+if [[ ! -e $profile_folder/chrome ]]; then
+    mkdir -p $profile_folder/chrome
 fi
+copy $ffox_userChrome $profile_folder/chrome/userChrome.css
 
 # Execute firefox
-exec $ffox_bin --profile "$profile_folder" --new-instance
+exec $ffox_bin --profile "$profile_folder" --new-instance "$@"
