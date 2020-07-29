@@ -22,7 +22,7 @@ findbar {
 
 /* Add Padding To Items On Bookmarks Bar */
 toolbarbutton.bookmark-item {
-    padding: 5px !important;
+    padding: 3px 5px !important;
 }
 
 /* Change Folder Icon In Bookmarks */
