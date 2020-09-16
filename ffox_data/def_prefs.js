@@ -25,6 +25,7 @@
  *                  + Enable Tracking Protection
  *                  + Always Send Do Not Track
  *                  + Disable DoH (DNS-over-HTTPS)
+ *                  + Disable Pocket Recommendations on New Tabs
  */
 
 /*
@@ -84,3 +85,4 @@ user_pref("network.trr.mode", 5);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites",false);
 user_pref("browser.urlbar.update1",false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket",false);
