@@ -85,4 +85,6 @@ user_pref("network.trr.mode", 5);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites",false);
 user_pref("browser.urlbar.update1",false);
+user_pref("extensions.pocket.enabled", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket",false);
+user_pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.section.highlights.includePocket",false);
