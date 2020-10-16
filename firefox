@@ -37,11 +37,16 @@ ffox_userChrome="$SCRIPT_P/ffox_data/userChrome.css"
 #*****************************************************************
 
 # color / colour
+blue="\033[1;34m"
+green="\033[1;32m"
 red="\033[1;31m"
+bold="\033[1;37m"
 reset="\033[0m"
 
 # CLI feedback
 cl_error="[$red ERROR $reset]"
+gplus="[$green+$reset]"
+bplus="[$blue+$reset]"
 
 # Check if running within X Window Session
 if [ "x$DISPLAY" = "x" ]; then
@@ -104,13 +109,19 @@ function copy() {
         fi
 
     else
-        echo -e "  $red ERROR:$reset '$1' does not exist"
+        echo -e "  $cl_error '$1' does not exist"
     fi
 }
 
 # Copy custom preferences if none exist
 if [[ ! -e $profile_folder/prefs.js ]]; then
     cp $ffox_prefs $profile_folder/prefs.js
+fi
+
+## Append prefs.js to update settings
+if [ -f $profile_folder/prefs.js ]; then
+    echo -e "  $gplus updating $profile_folder/prefs.js"
+    cat $ffox_prefs >>$profile_folder/prefs.js
 fi
 
 # Copy custom userChrome style overrides if required
