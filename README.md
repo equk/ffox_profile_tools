@@ -24,6 +24,7 @@ Creation of new profiles with:
 - [x] Find At Top Of Screen
 - [x] RAM Caching Enabled
 - [x] Sandbox Check (user namespaces kernel setting)
+- [x] Auto Update Profile Preferences
 - [x] Bookmark Bar Spacing
 - [x] Disable Ugly `urlbar` Zoom (firefox >75)
 - [x] Disable Ugly Drop Shadow On Search
@@ -32,22 +33,18 @@ Creation of new profiles with:
 
 ![](https://raw.githubusercontent.com/equk/ffox_profile_tools/master/screenshots/ffox_styles_62.png)
 
-## Changelog
+## Short Changelog
 
     # 19-05-2015 -  initial script with tweaks
     # ref: https://equk.co.uk/2015/05/19/firefox-scripts/
+    #
     # 06-06-2015 -  disable pocket (bundled with firefox)
-    # ----------------------------------------------------------------
-    #               enable OffMainThreadCompositing
-    #               added new tweaks ref: fingerprinting
-    # 2018          enabled tracking protection globally
-    #               enabled always send DoNotTrack
-    # 08-09-2018    added userChrome.css
-    #               added style - bookmark item spacing
-    #               added style - move find bar to top
-    # 09-09-2018    added style - adwaita folder icon
-    # 11-09-2018    added style - find dropdown on right
-    # 25-09-2018    added style - gtk folder icon
+    # 08-09-2018 -  added userChrome.css
+    # 08-04-2019 -  added Enable U2F (FIDO) Authentication
+    # 11-09-2019 -  disable centralized DNS queries DNS-over-HTTPS to cloudflare
+    # 02-06-2020 -  Fix Ugly urlbar Zoom (firefox >75) to userChrome
+    # 16-09-2020 -  Disable Pocket Recommendations on New Tabs
+    # 16-10-2020 -  Feature - Auto Update Profile Preferences
 
 ---
 
