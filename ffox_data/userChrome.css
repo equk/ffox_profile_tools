@@ -61,3 +61,17 @@ treechildren::-moz-tree-image(title, container) {
     box-shadow: none !important;
     animation: none !important;
 }
+
+/* fixes for firefox >92 */
+
+/* Bookmarks menu spacing */
+menupopup > menuitem,
+menupopup > menu {
+    padding-block: 0px !important;
+    border-radius: 0px 0px !important;
+}
+
+/* Menu spacing */
+:root {
+    --arrowpanel-menuitem-padding: 0px 0px !important;
+}
