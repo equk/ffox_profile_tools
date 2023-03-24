@@ -1,24 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* Firefox Style Overrides - github.com/equk | twitter.com/equilibriumuk */
-/* Move Find Bar To Top */
-.browserContainer>findbar {
-    -moz-box-ordinal-group: 0;
-}
-
-/* Move Find To Right Styled As Dropdown */
-.browserContainer {
-    position: relative;
-}
-
-findbar {
-    position: absolute;
-    top: -1px;
-    right: 25px;
-    border: 1px solid var(--toolbox-border-bottom-color);
-    border-top-width: 0;
-    border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
-}
 
 /* Add Padding To Items On Bookmarks Bar */
 toolbarbutton.bookmark-item {
