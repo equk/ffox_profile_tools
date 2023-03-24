@@ -79,6 +79,7 @@ user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.urlbar.update1",false);
+user_pref("browser.urlbar.groupLabels.enabled",false);
 user_pref("dom.event.clipboardevents.enabled",false);
 user_pref("dom.network.enabled",false);
 user_pref("extensions.pocket.enabled", false);
