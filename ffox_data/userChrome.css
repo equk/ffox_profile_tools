@@ -85,3 +85,192 @@ menupopup>menu {
 #context-inspect-a11y {
     display: none !important;
 }
+
+/* Old style square tabs with accent */
+/* ref: https://www.userchrome.org/firefox-89-styling-proton-ui.html */
+
+.tab-background {
+    border-radius: 0px 0px 0px 0px !important;
+    margin-block: 1px 0 !important;
+}
+
+#scrollbutton-up,
+#scrollbutton-down {
+    border-top-width: 1px !important;
+    border-bottom-width: 0 !important;
+}
+
+.tab-background:is([selected], [multiselected]):-moz-lwtheme {
+    --lwt-tabs-border-color: rgba(0, 0, 0, 0.5) !important;
+    border-bottom-color: transparent !important;
+}
+
+[brighttext="true"] .tab-background:is([selected], [multiselected]):-moz-lwtheme {
+    --lwt-tabs-border-color: rgba(255, 255, 255, 0.5) !important;
+    border-bottom-color: transparent !important;
+}
+
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
+    margin: 0px max(calc(0px - 3px), 0px) !important;
+}
+
+
+#TabsToolbar,
+#tabbrowser-tabs {
+    --tab-min-height: 29px !important;
+}
+
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"]+#TabsToolbar,
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"]+#TabsToolbar #tabbrowser-tabs {
+    --tab-min-height: 30px !important;
+}
+
+#scrollbutton-up,
+#scrollbutton-down {
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+}
+
+#TabsToolbar,
+#TabsToolbar>hbox,
+#TabsToolbar-customization-target,
+#tabbrowser-arrowscrollbox {
+    max-height: calc(var(--tab-min-height) + 1px) !important;
+}
+
+#TabsToolbar-customization-target toolbarbutton>.toolbarbutton-icon,
+#TabsToolbar-customization-target .toolbarbutton-text,
+#TabsToolbar-customization-target .toolbarbutton-badge-stack,
+#scrollbutton-up,
+#scrollbutton-down {
+    padding-top: 7px !important;
+    padding-bottom: 6px !important;
+}
+
+.tabbrowser-tab:is([image], [pinned])>.tab-stack>.tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab>.tab-stack>.tab-content[pinned][titlechanged]:not([selected="true"]),
+#firefox-view-button[attention],
+.webextension-browser-action[attention="true"] {
+    background-position-y: bottom 2px !important;
+}
+
+
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, .20)) !important;
+}
+
+[brighttext="true"] .tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, var(--lwt-selected-tab-background-color, rgba(255, 255, 255, .20))) !important;
+}
+
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+    border-radius: 0 !important;
+}
+
+.tabbrowser-tab {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+.tab-background {
+    --context-line-margin-adjust: 3px;
+    --context-line-active-adjust: 1px;
+}
+
+.tabbrowser-tab[usercontextid]:is([selected=true], [visuallyselected="true"], [multiselected]) .tab-background {
+    border-top: 1px solid transparent;
+}
+
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
+    margin-top: calc(var(--tab-min-height) - var(--context-line-margin-adjust) - 2px) !important;
+}
+
+.tabbrowser-tab[usercontextid]:is([selected=true], [visuallyselected="true"], [multiselected])>.tab-stack>.tab-background>.tab-context-line {
+    margin-top: calc(var(--tab-min-height) - var(--context-line-margin-adjust) - var(--context-line-active-adjust) - 2px) !important;
+}
+
+
+.tab-background::before {
+    content: "";
+    display: block;
+    height: 3px;
+    margin: -1px 0px 0;
+}
+
+.tabbrowser-tab[selected] .tab-background::before {
+    background-color: #0a84ff;
+}
+
+.tabbrowser-tab[multiselected]:not([selected]) .tab-background::before {
+    background-color: color-mix(in srgb, #0a84ff 66%, transparent);
+}
+
+.tabbrowser-tab:not([selected], [multiselected]):hover .tab-background::before {
+    background-color: color-mix(in srgb, currentColor 33%, transparent);
+    transform: none;
+}
+
+.tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
+    transform: scaleX(.8);
+    transition: transform 100ms linear;
+}
+
+.tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
+    margin: -1px 0 0 !important;
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: calc(20px / 2 + 2px) !important;
+    margin-right: 2px !important;
+    padding: 0 !important;
+}
+
+.tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted])> :not(.tab-icon-overlay) {
+    margin-left: -4px !important;
+    margin-top: calc((20px - 16px) / 2) !important;
+}
+
+.tabbrowser-tab:not(:hover) .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]),
+.tabbrowser-tab:hover .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted])> :not(.tab-icon-overlay),
+:root[uidensity="compact"] .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted])> :not(.tab-icon-overlay) {
+    opacity: 1 !important;
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]):hover {
+    fill: green !important;
+}
+
+[lwthemetextcolor="bright"] .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]):hover {
+    fill: lightgreen !important;
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]) {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 2px !important;
+    margin-right: -2px !important;
+    padding: 0 !important;
+    top: 0 !important;
+}
+
+.tab-icon-stack:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted])> :not(.tab-icon-overlay) {
+    margin-left: -6px !important;
+    margin-top: calc((20px - 16px) / 2) !important;
+}
+
+.tabbrowser-tab:not(:hover) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]),
+.tabbrowser-tab:hover .tab-icon-stack:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted])> :not(.tab-icon-overlay),
+:root[uidensity="compact"] .tab-icon-stack:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted])> :not(.tab-icon-overlay) {
+    opacity: 1 !important;
+}
+
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]):hover {
+    fill: green !important;
+}
+
+[lwthemetextcolor="bright"] .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]):hover {
+    fill: lightgreen !important;
+}
