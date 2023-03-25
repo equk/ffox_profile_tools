@@ -105,7 +105,7 @@ user_pref("pdfjs.disabled", true);
 user_pref("pdfjs.enableScripting", false);
 user_pref("privacy.donottrackheader.enabled",true);
 user_pref("privacy.firstparty.isolate",true);
-user_pref("privacy.resistFingerprinting",true);
+user_pref("privacy.resistFingerprinting",false);
 user_pref("privacy.trackingprotection.enabled",true);
 user_pref("security.family_safety.mode", 0);
 user_pref("security.ssl.disable_session_identifiers", true);
