@@ -28,6 +28,12 @@ Creation of new profiles with:
 - [x] Bookmark Bar Spacing
 - [x] Disable Ugly `urlbar` Zoom (firefox >75)
 - [x] Disable Ugly Drop Shadow On Search
+- [x] Disable Search Suggestions
+- [x] Disable Sponsored Suggestions
+- [x] Restore Old Square Tabs
+- [x] Smaller Tab Density
+- [x] Cleaner Image Context Menu
+- [x] Smaller Bookmark Menu Spacing
 
 ## Screenshot
 
