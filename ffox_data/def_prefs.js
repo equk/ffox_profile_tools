@@ -90,7 +90,7 @@ user_pref("dom.network.enabled",false);
 user_pref("extensions.pocket.enabled", false);
 user_pref("geo.enabled", false);
 user_pref("intl.locale.matchOS",false);
-user_pref("keyword.enabled", false);
+user_pref("keyword.enabled", true);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("media.navigator.enabled",false);
 user_pref("media.peerconnection.enabled",false);
