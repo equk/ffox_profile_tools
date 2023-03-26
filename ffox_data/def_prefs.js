@@ -94,6 +94,7 @@ user_pref("keyword.enabled", true);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("media.navigator.enabled",false);
 user_pref("media.peerconnection.enabled",false);
+user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled",false);
 user_pref("network.cookie.cookieBehavior", 1);
 user_pref("network.cookie.thirdparty.sessionOnly",true);
 user_pref("network.gio.supported-protocols", "");
