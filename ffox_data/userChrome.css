@@ -2,6 +2,11 @@
 
 /* Firefox Style Overrides - github.com/equk | twitter.com/equilibriumuk */
 
+/* Move Find Bar To Top */
+.browserContainer>findbar {
+    -moz-box-ordinal-group: 0;
+}
+
 /* Add Padding To Items On Bookmarks Bar */
 toolbarbutton.bookmark-item {
     padding: 3px 5px !important;
