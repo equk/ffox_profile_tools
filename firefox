@@ -132,4 +132,4 @@ fi
 copy $ffox_userChrome $profile_folder/chrome/userChrome.css
 
 # Execute firefox
-exec $ffox_bin --profile "$profile_folder" --new-instance "$@"
+exec $ffox_bin --profile "$profile_folder" "$@"
