@@ -46,11 +46,17 @@ Creation of new profiles with:
     #
     # 06-06-2015 -  disable pocket (bundled with firefox)
     # 08-09-2018 -  added userChrome.css
+    # ref: https://equk.co.uk/2018/09/12/firefox-profile-tools/
+    #
     # 08-04-2019 -  added Enable U2F (FIDO) Authentication
     # 11-09-2019 -  disable centralized DNS queries DNS-over-HTTPS to cloudflare
     # 02-06-2020 -  Fix Ugly urlbar Zoom (firefox >75) to userChrome
     # 16-09-2020 -  Disable Pocket Recommendations on New Tabs
     # 16-10-2020 -  Feature - Auto Update Profile Preferences
+    # 16-10-2020 -  Anti Tracking urlbar Prefs
+    # 09-11-2021 -  Bookmark Menu Spacing
+    # 24-03-2023 -  Disable Firefox Suggest
+    # 27-03-2023 -  Restore Old Look With Square Tabs
 
 ---
 
