@@ -6,12 +6,13 @@
  * https://github.com/equk/linux/blob/master/bin/ffox_data/def_prefs.js
  *
  * Main changes:
- *                  + Use RAM for cache (disable disk caching)
- *                  + PDFJS disabled
+ *                  + Use RAM for cache (Disable disk caching)
+ *                  + PDFJS Disabled
  *                  + 3rd party cookies blocked
  *                  + Disable saving of passwords
  *                  + Disable network prefetching
- *                  + Disable search engine suggestions
+ *                  + Disable Search Suggestions
+ *                  + Disable Sponsored Suggestions
  *                  + Disable Geolocation
  *                  + Disable Google Safebrowsing
  *                  + Disable Pocket
@@ -26,6 +27,11 @@
  *                  + Always Send Do Not Track
  *                  + Disable DoH (DNS-over-HTTPS)
  *                  + Disable Pocket Recommendations on New Tabs
+ *                  + Disable remote url for google safebrowsing checking downloads
+ *                  + Display language as en-US for all users (fingerprinting)
+ *                  + Disable region specific updates
+ *                  + Disable builtin password manager (autofill)
+ *                  + Disable recommendations for addons
  */
 
 /*
@@ -64,6 +70,7 @@ user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "{}"
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", "{\"hidden\":true}");
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
@@ -72,8 +79,14 @@ user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.pocket.enabled", false);
+user_pref("browser.region.network.url", "");
+user_pref("browser.region.update.enabled", false);
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
+user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
 user_pref("browser.safebrowsing.enabled", true);
 user_pref("browser.safebrowsing.malware.enabled", true);
 user_pref("browser.safebrowsing.phishing.enabled", true);
@@ -88,8 +101,13 @@ user_pref("browser.urlbar.groupLabels.enabled",false);
 user_pref("dom.event.clipboardevents.enabled",false);
 user_pref("dom.network.enabled",false);
 user_pref("extensions.pocket.enabled", false);
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("geo.enabled", false);
 user_pref("intl.locale.matchOS",false);
+user_pref("intl.accept_languages", "en-US, en");
+user_pref("javascript.use_us_english_locale", true);
 user_pref("keyword.enabled", true);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("media.navigator.enabled",false);
@@ -102,20 +120,24 @@ user_pref("network.http.referer.spoofSource",false);
 user_pref("network.http.referer.XOriginPolicy", 1);
 user_pref("network.prefetch-next", false);
 user_pref("network.trr.mode", 5);
-user_pref("pdfjs.disabled", true);
+user_pref("pdfjs.Disabled", true);
 user_pref("pdfjs.enableScripting", false);
 user_pref("privacy.donottrackheader.enabled",true);
 user_pref("privacy.firstparty.isolate",true);
 user_pref("privacy.resistFingerprinting",false);
 user_pref("privacy.trackingprotection.enabled",true);
+user_pref("privacy.userContext.enabled", true);
+user_pref("privacy.userContext.ui.enabled", true);
 user_pref("security.family_safety.mode", 0);
-user_pref("security.ssl.disable_session_identifiers", true);
+user_pref("security.ssl.Disable_session_identifiers", true);
 user_pref("security.ssl.errorReporting.automatic", false);
 user_pref("security.ssl.errorReporting.enabled", false);
 user_pref("security.ssl.require_safe_negotiation", true);
 user_pref("security.tls.enable_0rtt_data", false);
 user_pref("security.tls.version.enable-deprecated", false);
 user_pref("signon.rememberSignons", false);
+user_pref("signon.autofillForms", false);
+user_pref("signon.formlessCapture.enabled", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.enabled",false);
 user_pref("toolkit.telemetry.unified",false);
