@@ -7,8 +7,8 @@
  *
  * Main changes:
  *                  + Use RAM for cache (Disable disk caching)
- *                  + PDFJS Disabled
- *                  + 3rd party cookies blocked
+ *                  + Disable PDFJS
+ *                  + Block 3rd party cookies
  *                  + Disable saving of passwords
  *                  + Disable network prefetching
  *                  + Disable Search Suggestions
@@ -16,7 +16,6 @@
  *                  + Disable Geolocation
  *                  + Disable Google Safebrowsing
  *                  + Disable Pocket
- *                  + Enable OMTC to fix tearing
  *                  + Disable network (fingerprinting)
  *                  + Disable WebRTC (fingerprinting)
  *                  + Disable beacon (analytics)
@@ -120,7 +119,7 @@ user_pref("network.http.referer.spoofSource",false);
 user_pref("network.http.referer.XOriginPolicy", 1);
 user_pref("network.prefetch-next", false);
 user_pref("network.trr.mode", 5);
-user_pref("pdfjs.Disabled", true);
+user_pref("pdfjs.disabled", true);
 user_pref("pdfjs.enableScripting", false);
 user_pref("privacy.donottrackheader.enabled",true);
 user_pref("privacy.firstparty.isolate",true);
@@ -129,7 +128,7 @@ user_pref("privacy.trackingprotection.enabled",true);
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
 user_pref("security.family_safety.mode", 0);
-user_pref("security.ssl.Disable_session_identifiers", true);
+user_pref("security.ssl.disable_session_identifiers", true);
 user_pref("security.ssl.errorReporting.automatic", false);
 user_pref("security.ssl.errorReporting.enabled", false);
 user_pref("security.ssl.require_safe_negotiation", true);
