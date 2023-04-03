@@ -37,7 +37,17 @@ Creation of new profiles with:
 
 ## Screenshot
 
-![](https://raw.githubusercontent.com/equk/ffox_profile_tools/master/screenshots/ffox_styles_62.png)
+### userChrome Comparison
+
+Here is a comparison to show the changes made with the userChrome styles.
+
+#### Firefox Default
+
+![](./screenshots/ffox_linux_default.jpg)
+
+#### Firefox userChrome Applied
+
+![](./screenshots/ffox_linux_userchrome.jpg)
 
 ## Short Changelog
 
