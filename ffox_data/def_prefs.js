@@ -31,6 +31,7 @@
  *                  + Disable region specific updates
  *                  + Disable builtin password manager (autofill)
  *                  + Disable recommendations for addons
+ *                  + Enable Global Privacy Control (CCPA GDPR)
  */
 
 /*
@@ -123,6 +124,8 @@ user_pref("pdfjs.disabled", true);
 user_pref("pdfjs.enableScripting", false);
 user_pref("privacy.donottrackheader.enabled",true);
 user_pref("privacy.firstparty.isolate",true);
+user_pref("privacy.globalprivacycontrol.enabled",true);
+user_pref("privacy.globalprivacycontrol.functionality.enabled",true);
 user_pref("privacy.resistFingerprinting",false);
 user_pref("privacy.trackingprotection.enabled",true);
 user_pref("privacy.userContext.enabled", true);
