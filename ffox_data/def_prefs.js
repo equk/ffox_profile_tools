@@ -32,6 +32,7 @@
  *                  + Disable builtin password manager (autofill)
  *                  + Disable recommendations for addons
  *                  + Enable Global Privacy Control (CCPA GDPR)
+ *                  + Connect using HTTPS first (default: private only)
  */
 
 /*
@@ -104,6 +105,8 @@ user_pref("browser.urlbar.update1",false);
 user_pref("browser.urlbar.groupLabels.enabled",false);
 user_pref("dom.event.clipboardevents.enabled",false);
 user_pref("dom.network.enabled",false);
+user_pref("dom.security.https_first",true);
+user_pref("dom.security.https_first_pbm",true);
 user_pref("extensions.pocket.enabled", false);
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
