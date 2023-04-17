@@ -56,6 +56,10 @@
  * Set DevTools Dark Theme
  * user_pref("devtools.theme", "dark");
  *
+ * Force HTTPS Only
+ * (breaks mixed content & http sites)
+ * user_pref("dom.security.https_only_mode", true);
+ *
  */
 
 user_pref("app.normandy.enabled", false);
