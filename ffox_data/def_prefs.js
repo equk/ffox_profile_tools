@@ -24,7 +24,6 @@
  *                  + Disable Mozilla telemetry
  *                  + Enable Tracking Protection
  *                  + Always Send Do Not Track
- *                  + Disable DoH (DNS-over-HTTPS)
  *                  + Disable Pocket Recommendations on New Tabs
  *                  + Disable remote url for google safebrowsing checking downloads
  *                  + Display language as en-US for all users (fingerprinting)
@@ -60,6 +59,12 @@
  * Force HTTPS Only
  * (breaks mixed content & http sites)
  * user_pref("dom.security.https_only_mode", true);
+ *
+ * Force DoH (DNS-over-HTTPS)
+ * user_pref("network.trr.mode", 3);
+ * Use Custom DoH Server
+ * user_pref("network.trr.custom_uri", "https://cusom-server-uri/dns-query")
+ * user_pref("network.trr.uri", "https://cusom-server-uri/dns-query");
  *
  */
 
