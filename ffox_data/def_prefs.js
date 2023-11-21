@@ -33,6 +33,7 @@
  *                  + Disable recommendations for addons
  *                  + Enable Global Privacy Control (CCPA GDPR)
  *                  + Connect using HTTPS first (default: private only)
+ *                  + Enable seperate search provider on private tabs
  */
 
 /*
@@ -119,6 +120,7 @@ user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
 user_pref("browser.safebrowsing.enabled", true);
 user_pref("browser.safebrowsing.malware.enabled", true);
 user_pref("browser.safebrowsing.phishing.enabled", true);
+user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.urlbar.suggest.searches", false);
