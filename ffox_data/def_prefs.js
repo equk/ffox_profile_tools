@@ -123,6 +123,7 @@ user_pref("browser.safebrowsing.phishing.enabled", true);
 user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
+user_pref("browser.urlbar.update2.engineAliasRefresh", true);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
