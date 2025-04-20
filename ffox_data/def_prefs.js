@@ -55,6 +55,9 @@
  * Disable website notifications (eg: reddit)
  * user_pref("dom.webnotifications.enabled", false);
  *
+ * Use firefox notifications
+ * user_pref("alerts.useSystemBackend", false);
+ *
  * Enable U2F (FIDO) Authentication
  * user_pref("security.webauth.u2f", true);
  *
