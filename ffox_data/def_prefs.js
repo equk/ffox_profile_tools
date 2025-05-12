@@ -84,6 +84,10 @@
  *
  * user_pref("privacy.resistFingerprinting", true);
  *
+ * Disable WebGL (fingerprinting)
+ *
+ * user_pref("webgl.disabled", true);
+ *
  */
 
 /*
