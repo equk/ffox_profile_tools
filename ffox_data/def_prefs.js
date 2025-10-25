@@ -213,6 +213,7 @@ user_pref("dom.security.https_first", true);
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
+user_pref("extensions.ml.enabled", false);
 user_pref("extensions.pocket.enabled", false);
 user_pref("extensions.systemAddon.update.enabled", false);
 user_pref("extensions.systemAddon.update.url", "");
