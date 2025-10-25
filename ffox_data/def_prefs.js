@@ -191,6 +191,8 @@ user_pref("browser.safebrowsing.reportPhishURL", "");
 user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
+user_pref("browser.tabs.groups.smart.enabled", false);
+user_pref("browser.tabs.groups.smart.userEnable", false);
 user_pref("browser.urlbar.groupLabels.enabled", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
