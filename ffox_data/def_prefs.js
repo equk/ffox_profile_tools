@@ -127,6 +127,7 @@ user_pref("browser.ml.enable", false);
 user_pref("browser.ml.chat.page", false);
 user_pref("browser.ml.chat.page.footerBadge", false);
 user_pref("browser.ml.chat.page.menuBadge", false);
+user_pref("browser.ml.chat.menu", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "{}");
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
