@@ -36,6 +36,7 @@
  *                  + Enable seperate search provider on private tabs
  *                  + Disable Google & Mozilla safebrowsing
  *                  + Disable AI features (browser.ml.xxx)
+ *                  + Disable AI powered smart tab grouping
  *                  + Disable more newtab activity stream options
  *                  + Disable captive portal
  *                  + Disable connectivity checks
@@ -192,7 +193,7 @@ user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.tabs.groups.smart.enabled", false);
-user_pref("browser.tabs.groups.smart.userEnable", false);
+user_pref("browser.tabs.groups.smart.userEnabled", false);
 user_pref("browser.urlbar.groupLabels.enabled", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
